@@ -7,7 +7,11 @@ const Product = ({ product, Price }) => {
             <div>
                 <span className="product-brand">{product.brand}</span>
                 <span className="product-title">{product.title}</span>
-                <Price price={product.price} />
+                <Price>
+                    <span>
+                        {product.price}
+                    </span>
+                </Price>
             </div>
         </div>
     )
