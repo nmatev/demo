@@ -15,12 +15,10 @@ class ProductList extends Component { // PureComponent small and fast version of
         }
     }
 
-    componentDidMount() {
-        setInterval(() => {
-            this.setState({
-                counter: this.state.counter + 1
-            })
-        }, 1000)
+    hendleClick(event) {
+        this.setState({
+            counter: this.state.counter + 1
+        })
     }
 
     render() {
@@ -30,7 +28,7 @@ class ProductList extends Component { // PureComponent small and fast version of
         return (
             <div className="container">
                 <Product product={product} Price={ProductPrice} />
-                <button>{counter}</button>
+                <button onClick={event => this.hendleClick()}>Click me: {counter}</button>
             </div>
         )
     }
